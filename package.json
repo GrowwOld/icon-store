@@ -1,0 +1,64 @@
+{
+  "name": "@groww-tech/icon-store",
+  "version": "0.0.1",
+  "description": "Icon Library customized for use in Groww",
+  "files": [
+    "mi",
+    "custom",
+    "types.d.ts"
+  ],
+  "typings": "types.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "generate": "run-p generate:*",
+    "generate:mi": "rm -rf mi && mkdir mi && ./node_modules/@svgr/cli/bin/svgr -d mi svgs/mi",
+    "generate:custom": "rm -rf custom && mkdir custom && ./node_modules/@svgr/cli/bin/svgr -d custom svgs/custom",
+    "transform": "node scripts/compileComponent.js && node scripts/generateTypes.js",
+    "prepublishOnly": "npm run generate && npm run transform",
+    "clean-mi-icons": "rm -rf svgs/mi && mkdir svgs/mi",
+    "clean-custom-icons": "rm -rf svgs/custom && mkdir svgs/custom"
+  },
+  "keywords": [
+    "icon-store",
+    "groww",
+    "icons",
+    "material-icons"
+  ],
+  "author": "Vikas Singh <vikas.singh707@gmail.com> (https://twitter.com/VikasSi25579022)",
+  "contributors": [
+    {
+      "name": "Ankit Chouhan",
+      "url": "https://twitter.com/ankit__chouhan"
+    },
+    {
+      "name": "Rishabh Tripathi",
+      "url": "https://twitter.com/ristripathi"
+    },
+    {
+      "name": "Rishav Thakur",
+      "url": "https://twitter.com/st_tronn"
+    }
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/Groww/icon-store/issues"
+  },
+  "homepage": "https://github.com/Groww/icon-store#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@svgr/cli": "^5.5.0",
+    "chalk": "^4.1.2",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.12.0",
+    "terser": "^5.9.0"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
+  }
+}
