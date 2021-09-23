@@ -23,10 +23,9 @@ node scripts/generateMaterialIcons.js
 
 ```
 .
-├── dist
-│   ├── mi 
-│   ├── custom 
-│   └── types.d.ts               // exports react component type  
+├── mi                       // minified material svg's react components
+├── custom                   // minified custom svg's react components
+└── types.d.ts               // exports react component type  
 │ 
 ├── svgs
 │   ├── mi
