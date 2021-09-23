@@ -1,3 +1,11 @@
+/**
+ * This function generate typescript files usinga template string.
+ * component folder paths: dist/mi, dist/custom
+ * 
+ * It will generate the .d.ts files for each component in the same folder.
+ */
+
+
 const { getDirContent, writeContentToFile } = require('./helpers/utils');
 
 const chalk = require('chalk');

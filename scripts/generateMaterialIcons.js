@@ -62,9 +62,3 @@ function getMaterialIconsFromGithubRepo() {
 
 
 getMaterialIconsFromGithubRepo();
-
-
-
-
-
-

@@ -1,3 +1,9 @@
+/**
+ * This function will transform the component files of mi and custom icons
+ * using babel transfromSync and minify the result using terser's api.
+ */
+
+
 const babel = require('@babel/core');
 const fs = require('fs');
 const path = require('path');

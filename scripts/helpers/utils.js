@@ -31,8 +31,6 @@ function normalizeFileName(name) {
     const startsWithNumberRegex = /^\d/;
 
     try {
-        name = name.replace('ic_', '').replace('_24px', '');
-
         if (startsWithNumberRegex.test(name)) {
             name = `material_${name}`
         }

@@ -1,3 +1,7 @@
+/**
+ * Template for the icon component, used by svgr package.
+ */
+
 function defaultTemplate(
   { template },
   opts,
