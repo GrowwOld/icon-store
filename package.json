@@ -1,7 +1,7 @@
 {
-  "name": "icon-store",
-  "version": "0.2.6",
-  "description": "",
+  "name": "@groww-tech/icon-store",
+  "version": "0.0.1",
+  "description": "Icon Library customized for use in Groww",
   "files": [
     "dist/mi",
     "dist/custom",
