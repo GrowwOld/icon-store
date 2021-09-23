@@ -34,8 +34,8 @@ const babelConfig = {
 
 
 function compileReactComponentsUsingBabel() {
-    const miComponentPath = path.join(__dirname, '../dist/mi');
-    const customComponentPath = path.join(__dirname, '../dist/custom');
+    const miComponentPath = path.join(__dirname, '../mi');
+    const customComponentPath = path.join(__dirname, '../custom');
 
     [miComponentPath, customComponentPath].forEach(function (componentPath) {
         console.log(chalk.green('Compiling resources from: ') + chalk.yellow(componentPath));

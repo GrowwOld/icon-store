@@ -1,6 +1,6 @@
 /**
  * This function generate typescript files usinga template string.
- * component folder paths: dist/mi, dist/custom
+ * component folder paths: mi, custom (top level)
  * 
  * It will generate the .d.ts files for each component in the same folder.
  */
@@ -11,7 +11,7 @@ const { getDirContent, writeContentToFile } = require('./helpers/utils');
 const chalk = require('chalk');
 
 function generateTypesForIconComponent() {
-    const componentFolderPaths = ['dist/mi', 'dist/custom'];
+    const componentFolderPaths = ['mi', 'custom'];
 
     componentFolderPaths.forEach(componentFolderPath => {
         console.log(chalk.green('Generating types for: ') + chalk.yellow(componentFolderPath));

@@ -3,16 +3,16 @@
   "version": "0.0.1",
   "description": "Icon Library customized for use in Groww",
   "files": [
-    "dist/mi",
-    "dist/custom",
-    "dist/types.d.ts"
+    "mi",
+    "custom",
+    "types.d.ts"
   ],
-  "typings": "dist/types.d.ts",
+  "typings": "types.d.ts",
   "sideEffects": false,
   "scripts": {
     "generate": "run-p generate:*",
-    "generate:mi": "rm -rf dist/mi && mkdir dist/mi && ./node_modules/@svgr/cli/bin/svgr -d dist/mi svgs/mi",
-    "generate:custom": "rm -rf dist/custom && mkdir dist/custom && ./node_modules/@svgr/cli/bin/svgr -d dist/custom svgs/custom",
+    "generate:mi": "rm -rf mi && mkdir mi && ./node_modules/@svgr/cli/bin/svgr -d mi svgs/mi",
+    "generate:custom": "rm -rf custom && mkdir custom && ./node_modules/@svgr/cli/bin/svgr -d custom svgs/custom",
     "transform": "node scripts/compileComponent.js && node scripts/generateTypes.js",
     "prepublishOnly": "npm run generate && npm run transform",
     "clean-mi-icons": "rm -rf svgs/mi && mkdir svgs/mi",

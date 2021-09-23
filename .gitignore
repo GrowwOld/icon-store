@@ -1,5 +1,5 @@
 node_modules
 package-lock.json
-dist/custom
-dist/mi
+custom
+mi
 material-design-icons
