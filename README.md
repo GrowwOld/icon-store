@@ -19,14 +19,43 @@ node scripts/generateMaterialIcons.js
 
 ### Folder Structure
 
-**dist**: Generated React components using material and custom svgs <br>
-**svgs**: Contains material and custom svgs <br>
-**scripts**: <br>
-&emsp;generateMaterialIcons.js: Script to copy and filter material icons from google's github repo <br>
-&emsp;generateTypes.js: Script to generate type for babel transformed svg component's js file <br/>
-&emsp;compileComponent.js: Script to transform and minify JS modules code for shipping <br/>
-&emsp;helpers/template.js: Custom template for our generated React components<br/>
-&emsp;helpers/utils.js: General utility function<br/>
+<br>
 
+```
+.
+├── dist
+│   ├── mi 
+│   ├── custom 
+│   └── types.d.ts               // exports react component type  
+│ 
+├── svgs
+│   ├── mi
+│   └── custom
+│ 
+├── scripts
+│   ├── generateMaterialIcons.js  // Script to copy and filter material icons from google's github repo
+│   ├── generateTypes.js          // Script to generate type for babel transformed svg component's js file
+│   ├── compileComponent.js       // Script to transform and minify JS modules code for shipping
+│   └── helpers
+│       ├── template.js           // Custom template for our generated React components
+│       └── utils.js              // General utility function
+│ 
+├── material-design-icons         // cloned material design repo
+├── .svgrc.js                     // svgrc config file
+├── package.json
+├── README.md
+└── .gitignore
+
+```
+
+### License
+
+MIT
+
+<br/>
+
+*These CSS files are customized for use in Groww projects. Use at your own risk.*
+
+<br/>
 
 ---
