@@ -4,7 +4,7 @@ import {
   SVGProps,
 } from 'react';
 
-interface ReactIconProps extends SVGProps<SVGSVGElement> {
+export interface ReactIconProps extends SVGProps<SVGSVGElement> {
   /**
    * size is a common prop for height and width
    * @example
