@@ -5,9 +5,10 @@
   "files": [
     "mi",
     "custom",
+    "index.js",
     "types.d.ts"
   ],
-  "typings": "types.d.ts",
+  "types": "types.d.ts",
   "sideEffects": false,
   "scripts": {
     "generate": "run-p generate:*",

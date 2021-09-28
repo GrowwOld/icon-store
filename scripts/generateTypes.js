@@ -9,6 +9,8 @@
 const { getDirContent, writeContentToFile } = require('./helpers/utils');
 
 const chalk = require('chalk');
+const { copyFileSync } = require('fs');
+
 
 function generateTypesForIconComponent() {
     const componentFolderPaths = ['mi', 'custom'];
@@ -19,7 +21,11 @@ function generateTypesForIconComponent() {
         const components = getDirContent(componentFolderPath);
 
         components.forEach(component => {
-            if (component.endsWith('.js') && !component.includes('index.js')) {
+            if (component.includes('index.js')) {
+                copyFileSync(`${componentFolderPath}/index.js`, `${componentFolderPath}/index.d.ts`);
+                return;
+            }
+            if (component.endsWith('.js')) {
                 const componentName = component.slice(0, -3);
 
                 const content = `import { ReactIconComponentType } from '../types';
