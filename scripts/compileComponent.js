@@ -41,7 +41,7 @@ function compileReactComponentsUsingBabel() {
         console.log(chalk.green('Compiling resources from: ') + chalk.yellow(componentPath));
         const componentFiles = fs.readdirSync(componentPath);
         componentFiles.forEach(file => {
-            if (file.endsWith('.js')) {
+            if (file.endsWith('.js') && !file.includes('index.js')) {
 
                 const filePath = path.join(componentPath, file);
                 const fileContents = fs.readFileSync(filePath, 'utf8');
