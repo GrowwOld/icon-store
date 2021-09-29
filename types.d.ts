@@ -11,6 +11,8 @@ export interface ReactIconProps extends SVGProps<SVGSVGElement> {
    * size => 24 will set height => 24, width => 24
    *  */
   size?: number | string;
+  /** Enable the icon component to inherit old svg image props*/
+  custom?: boolean;
 }
 
 export type ReactIconComponentType = ComponentType<ReactIconProps>;

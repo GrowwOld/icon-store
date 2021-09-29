@@ -14,7 +14,7 @@ function defaultTemplate(
   return jsTemplate.ast`import React from 'react';
   
   function ${componentRealName}(oldProps) {    
-    const props = Object.assign({
+    const props = oldProps.custom ? oldProps : Object.assign({
       height: oldProps.size || 24,
       width: oldProps.size || 24,
       viewBox: oldProps.viewBox || '0 0 24 24',
