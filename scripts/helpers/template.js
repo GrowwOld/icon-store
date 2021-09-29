@@ -18,7 +18,7 @@ function defaultTemplate(
       height: oldProps.size || 24,
       width: oldProps.size || 24,
       viewBox: oldProps.viewBox || '0 0 24 24',
-      fill: oldProps.fill || 'var(--text)',
+      fill: oldProps.fill || 'currentColor',
     }, oldProps, {
       size: undefined,
       className: 'groww-icons ' + (oldProps.className || ''),
