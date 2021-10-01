@@ -14,20 +14,18 @@ function defaultTemplate(
   return jsTemplate.ast`import React from 'react';
   
   function ${componentRealName}(oldProps) {    
-    const props = oldProps.custom ? oldProps : Object.assign({
-      height: oldProps.size || 24,
-      width: oldProps.size || 24,
-      viewBox: oldProps.viewBox || '0 0 24 24',
-      fill: oldProps.fill || 'var(--text)',
-    }, oldProps, {
+    const props = {
+      ...(oldProps.custom ? {} : { viewBox: '0 0 24 24', fill: 'var(--text)', height: 24, width: 24}),
+      ...(oldProps.size ? {height: oldProps.size, width: oldProps.size} : {}),
+      ...oldProps,
       size: undefined,
-      className: 'groww-icons ' + (oldProps.className || ''),
-    });
+      custom: undefined
+    };
 
     return ${jsx}
   }
   
-  export default React.memo ? React.memo(${componentRealName}) : ${componentRealName};
+  export default React.memo(${componentRealName});
     `
 }
 
