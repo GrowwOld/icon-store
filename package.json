@@ -17,7 +17,8 @@
     "transform": "node scripts/compileComponent.js && node scripts/generateTypes.js",
     "prepublishOnly": "npm run generate && npm run transform",
     "clean-mi-icons": "rm -rf svgs/mi && mkdir svgs/mi",
-    "clean-custom-icons": "rm -rf svgs/custom && mkdir svgs/custom"
+    "clean-custom-icons": "rm -rf svgs/custom && mkdir svgs/custom",
+    "postpublish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "keywords": [
     "icon-store",
