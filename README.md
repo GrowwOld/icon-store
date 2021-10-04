@@ -53,7 +53,7 @@ MIT
 
 <br/>
 
-*These CSS files are customized for use in Groww projects. Use at your own risk.*
+*This package is customized for use in Groww projects. Use at your own risk.*
 
 <br/>
 
