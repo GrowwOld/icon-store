@@ -15,7 +15,7 @@ function defaultTemplate(
   
   function ${componentRealName}(oldProps) {    
     const props = {
-      ...(oldProps.custom ? {} : { viewBox: '0 0 24 24', fill: 'var(--text)', height: 24, width: 24}),
+      ...(oldProps.custom ? {} : { viewBox: '0 0 24 24', fill: 'currentColor', height: 24, width: 24}),
       ...(oldProps.size ? {height: oldProps.size, width: oldProps.size} : {}),
       ...oldProps,
       size: undefined,
