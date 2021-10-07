@@ -3,3 +3,4 @@ package-lock.json
 custom
 mi
 material-design-icons
+!svgs/**
