@@ -15,10 +15,10 @@
     "generate:mi": "rm -rf mi && mkdir mi && ./node_modules/@svgr/cli/bin/svgr -d mi svgs/mi",
     "generate:custom": "rm -rf custom && mkdir custom && ./node_modules/@svgr/cli/bin/svgr -d custom svgs/custom",
     "transform": "node scripts/compileComponent.js && node scripts/generateTypes.js",
-    "prepublishOnly": "npm run generate && npm run transform",
     "clean-mi-icons": "rm -rf svgs/mi && mkdir svgs/mi",
     "clean-custom-icons": "rm -rf svgs/custom && mkdir svgs/custom",
-    "postpublish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag -a v$PACKAGE_VERSION -m \"@groww-tech/icon-store-v$PACKAGE_VERSION\" && git push --tags"
+    "build": "npm run generate && npm run transform",
+    "pushTags" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag -a v$PACKAGE_VERSION -m \"@groww-tech/icon-store-v$PACKAGE_VERSION\" && git push --tags"
   },
   "keywords": [
     "icon-store",
