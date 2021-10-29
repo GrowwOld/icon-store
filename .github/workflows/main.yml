@@ -6,8 +6,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 14.18.1
           registry-url: https://registry.npmjs.org/
@@ -15,8 +15,9 @@ jobs:
       - run: git config --global user.name "github-bot"
       - run: npm install
       - run: npm run build
-      - run: npm publish --access public
-      - run: npm run pushTags
+      - run: npm publish --access public --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: npm run pushTags
+        env:
           github-token: ${{secrets.GITHUB_TOKEN}}
