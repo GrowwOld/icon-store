@@ -4,3 +4,5 @@ custom
 mi
 material-design-icons
 !svgs/**
+
+.DS_Store
